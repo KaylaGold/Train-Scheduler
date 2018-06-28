@@ -8,7 +8,59 @@ body{
 }
 
 .jumbotron{
-    padding-top: 20px;
+    
     text-align: center;
-    font-style: bold; 
+    font-family: 'Monoton', cursive;
+    font-family: 'Bevan', cursive;
+    color: dimgray;
+    background-image: url("../images/colorful-railroad.jpg");
+    
+}
+
+.thead-light {
+    color: darkorange;
+    font-weight: bold;
+}
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+input[type=text] {
+    background-color: lightgrey; 
+   
+}
+
+#header{
+    color: darkorange; 
+    font-family: 'Monoton', cursive;
+    font-family: 'Bevan', cursive;
+    font-size: 25px;
+    background-color: peachpuff;
+}
+
+
+
+.form-group{
+    color: darkorange; 
+}
+
+#new-train{
+
+color: lightgray; 
+}
+
+#trainBtn{
+    color: goldenrod; 
+    background-color: dodgerblue; 
 }

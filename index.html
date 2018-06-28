@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Firebase-Train-Scheduler</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
      <!--Style Sheet-->
      <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+     <link href="https://fonts.googleapis.com/css?family=Bevan|Monoton" rel="stylesheet">
     
     <!-- Firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
@@ -41,13 +43,13 @@
             <thead class="thead-light">
                     <div class="row">
                             <div class="col-lg-12" class="thead-light">
-                               <div class = "heading">
-                                <th>Current Train Schedule</th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </div>   
+                            
+                                <th id ="header">Current Train Schedule</th>
+                                <th id ="header"></th>
+                                <th id ="header"></th>
+                                <th id ="header"></th>
+                                <th id ="header"></th>
+                               
              </div>
              <tr>
                     <td>Train Name</td>
@@ -68,34 +70,36 @@
         <!--Form-->
         <table class="table">
             <thead class="thead-light">
+                    
                 <tr>
-                    <th scope="col">Add Train</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col" id ="header">Add Train</th>
+                    <th scope="col" id ="header"></th>
+                    <th scope="col" id ="header"></th>
+                    <th scope="col" id ="header"></th>
+                    <th scope="col" id ="header"></th>
                 </tr>
+               
             </thead>
             
         </table>
         <form >
             <div class="form-group">
                 <label for="name-input">Train Name</label>
-                <input type="text" class="form-control" id="name-input" placeholder="Enter Train Name">
+                <input type="text" class="form-control" id="name-input" placeholder="Enter Train Name...">
             </div>
             <div class="form-group">
                 <label for="destination-input">Destination</label>
-                <input type="text" class="form-control" id="destination-input" placeholder="Destination">
+                <input type="text" class="form-control" id="destination-input" placeholder="Destination...">
             </div>
             <div class="form-group">
                 <label for="trainTime-input">First Train Time (HH:mm - Military Time) </label>
-                <input type="text" class="form-control" id="trainTime-input" placeholder="First Train Time HH:mm">
+                <input type="text" class="form-control" id="trainTime-input" placeholder="First Train Time HH:mm...">
             </div>
             <div class="form-group">
                 <label for="frequency-input">Frequency (min)</label>
-                <input type="text" class="form-control" id="frequency-input" placeholder="Frequency (min)">
+                <input type="text" class="form-control" id="frequency-input" placeholder="Frequency (min)...">
             </div>
-            <button type="submit" id="train btn btn-primary">Submit</button>
+            <button type="submit" id="trainBtn">Submit</button>
             <br>
             <br>
 

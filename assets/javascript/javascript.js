@@ -15,7 +15,7 @@ let config = {
   
   
   // Create Button to add trains
-  $("#train btn btn-primary").on("click", function(event){
+  $("#trainBtn").on("click", function(event){
     // Makes sure form doesnt perform via default nad refreshes the page
     event.preventDefault();
   
@@ -65,4 +65,33 @@ let config = {
   let initialTime = childSnapshot.val().initialTime;
   let frequency = childSnapshot.val().frequency; 
   
+// The first time is pushed back 1 year to make sure it comes before  the current time
+let firstTrTimeConverted = moment(initialTime, "HH:mm");
+console.log(firstTrTimeConverted);
+
+//Current Time
+let currentTime = moment().format("HH:mm");
+// Calculating difference in time between current time and converted time
+let diffInTime = moment().diff(moment(firstTrTimeConverted), "minutes");
+
+// Determining the remainder of time left
+let timeRemainder = diffInTime % frequency;
+
+
+// From the remainder, determining the time away the train is based on frequency
+let minutesAway = frequency - timeRemainder;
+
+
+// Calculating the next train time based on the current time and minutesAway
+let nextTrain = moment().add(minutesAway, "minutes").format("HH:mm"); 
+
+
+//Creating table containing information in database and appending when new data is created
+
+$("#new-train").append("<tr><td>" + trainName + 
+"</td><td>" + destination + "</td><td>" + frequency + 
+ "</td><td>" + nextTrain +  "</td><td>" + minutesAway + "</td></tr>");
+ 
+  });
   
+
