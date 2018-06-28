@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Firebase-Train-Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     <!--Style Sheet-->
+     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+    
+    <!-- Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-database.js"></script>
+
+
+<!--Moment.js-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+   
+       
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!--Jumbotron-->
+        <div class="jumbotron">
+            <h1 class="display-4">Railway Express Train Schedule</h1>
+
+        </div>
+
+        <!--Train Schedule Table-->
+
+        <table border="1" class="table">
+            <thead class="thead-light">
+                    <div class="row">
+                            <div class="col-lg-12" class="thead-light">
+                               <div class = "heading">
+                                <th>Current Train Schedule</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </div>   
+             </div>
+             <tr>
+                    <td>Train Name</td>
+                    <td>Destination</td>
+                    <td>Frequency (Mins)</td>
+                    <td>Next Arriaval</td>
+                    <td>Minutes Away</td>
+                </tr>
+            </thead>
+           <!-- Train info goes here! -->
+                    <tbody id="new-train">
+                    </tbody>
+                
+        </table>
+        <br>
+        <br>
+
+        <!--Form-->
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Add Train</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            
+        </table>
+        <form >
+            <div class="form-group">
+                <label for="name-input">Train Name</label>
+                <input type="text" class="form-control" id="name-input" placeholder="Enter Train Name">
+            </div>
+            <div class="form-group">
+                <label for="destination-input">Destination</label>
+                <input type="text" class="form-control" id="destination-input" placeholder="Destination">
+            </div>
+            <div class="form-group">
+                <label for="trainTime-input">First Train Time (HH:mm - Military Time) </label>
+                <input type="text" class="form-control" id="trainTime-input" placeholder="First Train Time HH:mm">
+            </div>
+            <div class="form-group">
+                <label for="frequency-input">Frequency (min)</label>
+                <input type="text" class="form-control" id="frequency-input" placeholder="Frequency (min)">
+            </div>
+            <button type="submit" id="train btn btn-primary">Submit</button>
+            <br>
+            <br>
+
+        </form>
+
+    </div>
+ 
+    <!--jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script src="./assets/javascript/javascript.js"></script>
+</body>
+
+</html>

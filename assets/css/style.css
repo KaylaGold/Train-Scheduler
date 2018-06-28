@@ -1,0 +1,14 @@
+body{
+    background-color: midnightblue;
+}
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+    background-color:  rgb(53, 53, 112);
+}
+
+.jumbotron{
+    padding-top: 20px;
+    text-align: center;
+    font-style: bold; 
+}
