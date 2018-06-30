@@ -65,7 +65,7 @@ let config = {
   let initialTime = childSnapshot.val().initialTime;
   let frequency = childSnapshot.val().frequency; 
   
-// The first time is pushed back 1 year to make sure it comes before  the current time
+// Convert the time
 let firstTrTimeConverted = moment(initialTime, "HH:mm");
 console.log(firstTrTimeConverted);
 
@@ -86,7 +86,7 @@ let minutesAway = frequency - timeRemainder;
 let nextTrain = moment().add(minutesAway, "minutes").format("HH:mm"); 
 
 
-//Creating table containing information in database and appending when new data is created
+// Creating table containing information in database and appending when new data is created
 
 $("#new-train").append("<tr><td>" + trainName + 
 "</td><td>" + destination + "</td><td>" + frequency + 
